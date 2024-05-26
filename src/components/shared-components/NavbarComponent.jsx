@@ -1,5 +1,5 @@
 // src/NavbarComponent.js
-import logo from "../../assets/ai.png"
+import logo from "../../assets/mascot.png"
 import React from 'react';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 

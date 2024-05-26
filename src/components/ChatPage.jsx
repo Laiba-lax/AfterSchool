@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Didyouknow from './Didyouknow'
 import { Chatbot } from './shared-components/Chatbot'
-
+import stars from "../assets/firework.gif"
+import diduknow from "../assets/did-you-know.gif"
 
 const ChatPage = () => {
 
@@ -16,12 +17,13 @@ const ChatPage = () => {
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-8">
-                <h3 className='text-success'>Submitted Successfully</h3>
+                        <div className='d-flex flex-wrap justify-content-center align-content-center'>
+                <h3 className='text-success mt-3' >Submitted Successfully</h3>
+                <img src={stars} alt="stars" className='stars'/>
+                        </div>
                         <div class="p-3 diduknow">
-                            <div className='mt-5'>
-                                <h3>
-                                    Did you Know?
-                                </h3>
+                            <div className='' data-aos="fade-up" data-aos-duration="1000">
+                                <img src={diduknow} alt="Did you know" className='diduknowAnimation' />
                                 <Didyouknow />
                             </div>
                         </div>

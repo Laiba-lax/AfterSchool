@@ -20,8 +20,8 @@ const Didyouknow = () => {
       const randomString = getRandomString(stringList);
       console.log(randomString);
   return (
-    <div>
-        <h2>{randomString}</h2>
+    <div >
+        <p className='randomString'>{randomString}</p>
     </div>
   )
 }
