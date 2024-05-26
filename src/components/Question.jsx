@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import ChatPage from './ChatPage';
+import Hero from './Hero';
 
 
 
-export const Question = () => {
-
+export const Question = ({ onInputChange }) => {
+    const name = useRef(null)
     const [isComponentVisible, setIsComponentVisible] = useState(false);
     const handleButtonClick = () => {
         setIsComponentVisible(!isComponentVisible);
+ 
     };
     if(isComponentVisible===false){
         return (
+            <>  
+            <Hero/>
             <div className="container mt-5">
                 <div className='text-center'>
                     <h2>To get started!</h2>
@@ -18,7 +22,7 @@ export const Question = () => {
                 </div>
                 <div className='form-con'>
                     <div className="mb-3">
-                        <label htmlFor="userName" className="form-label">User Name</label>
+                        <label htmlFor="userName" className="form-label" ref={name}>User Name</label>
                         <input
                             type="text"
                             className="form-control"
@@ -204,11 +208,12 @@ export const Question = () => {
                     </div>
             </div>
     
+            </>
         )
     }
     else{
         return (
-            <ChatPage/>
+            <ChatPage inputValue={name.current.value}/>
         );
     }
     
