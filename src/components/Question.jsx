@@ -3,7 +3,6 @@ import ChatPage from './ChatPage';
 
 
 
-
 export const Question = () => {
 
     const [isComponentVisible, setIsComponentVisible] = useState(false);

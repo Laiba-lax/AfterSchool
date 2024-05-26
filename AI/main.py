@@ -1,5 +1,4 @@
 # eh i dont remember why i wrote this, that's not what we're supposed to built tho
-
 import vertexai
 from vertexai.generative_models import GenerativeModel
 
